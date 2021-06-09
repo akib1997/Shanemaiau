@@ -11,7 +11,23 @@
     }
   }
 }
-
+.bg-gray {
+  background-color: #e6e6e6;
+}
+.bg-red {
+  background-color: red;
+}
+.text-red {
+  color: red;
+}
+.border-red {
+  border-color: red;
+}
+.hover-bg-red {
+  &:hover {
+    background-color: red;
+  }
+}
 .bg-shadow {
   transition: all 0.3s;
   &::after {
@@ -29,4 +45,45 @@
   &:hover::after {
     border: 4px solid red;
   }
+}
+
+.product-box {
+  &:hover {
+    -webkit-box-shadow: 0px 8px 10px -4px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 8px 10px -4px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 8px 10px -4px rgba(0, 0, 0, 0.41);
+  }
+}
+
+footer {
+  p {
+    color: #878787;
+  }
+  a {
+    font-size: 16px;
+  }
+}
+.slick-arrow {
+  border: 1px solid red;
+  background-color: transparent;
+  color: red;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-next:before,
+.slick-prev:before {
+  content: unset;
+}
+
+.slick-prev {
+  left: -30px;
+}
+.slick-next {
+  right: -30px;
+}
+.slick-next i,
+.slick-prev i {
+  font-size: 16px;
 }

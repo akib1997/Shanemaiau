@@ -1,24 +1,3 @@
-.slick-arrow {
-  border: 1px solid red;
-  background-color: transparent;
-  color: red;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slick-next:before,
-.slick-prev:before {
-  content: unset;
-}
-
-.slick-next {
-  right: -25px;
-}
-.slick-next i,
-.slick-prev i {
-  font-size: 16px;
-}
 // li > ul {
 //   transform: translatex(100%) scale(0);
 // }
