@@ -1,0 +1,102 @@
+footer {
+  // background-color: #8e7449;
+
+  .f-logo {
+    width: 80px;
+    margin: 0 auto 1rem;
+    display: block;
+
+    @include medium-screen {
+      margin: 0 0 1rem 0;
+    }
+  }
+  .form {
+    padding: 0.5rem 0;
+
+    small {
+      font-size: 11px;
+    }
+  }
+}
+.footer-links {
+  display: flex;
+  // align-items: center;
+
+  a {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+.social {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0.8rem;
+  justify-content: space-evenly;
+
+  a {
+    color: #fff;
+    font-size: 1.4rem;
+    // margin-right: 1rem;
+  }
+}
+
+.form-input {
+  border: 3px solid #9a825b;
+  border-radius: 5px;
+  max-width: 250px;
+  display: flex;
+
+  input {
+    background-color: transparent;
+    width: 90%;
+    padding: 0.3rem 1rem;
+    color: #fff;
+    font-weight: 600;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  i {
+    color: #fff;
+  }
+}
+
+.white-logo {
+  // background-color: #fff;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #f7f5f3;
+    left: -1rem;
+    bottom: 0;
+
+    @include large-screen {
+      right: -4rem;
+    }
+  }
+
+  .s-logo {
+    width: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+  .t-logo {
+    max-width: 120px;
+    width: 100%;
+    display: block;
+    border-top: 2px solid #fff;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+
+    @include large-screen {
+      max-width: 140px;
+    }
+  }
+}

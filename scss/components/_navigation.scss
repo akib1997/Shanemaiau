@@ -1,0 +1,40 @@
+.menu {
+	li {
+		a {
+			color: #ffffff;
+			transition: all .3s;
+			border-radius: 20px;
+			line-height: 1;
+			padding: 10px 14px;
+			margin: 0 5px;
+			border: 1.5px solid transparent;
+			font-weight: 700;
+
+			@include medium-screen {
+				padding: 7px 13px;
+				margin-bottom: 5px;
+			}
+
+			&.active,
+			&:hover {
+				border: 1.5px solid #fff;
+			}
+
+			@include medium-screen {
+				margin: 0 5px;
+				padding: 7px 12px;
+			}
+
+			@include tab-screen {
+				margin: 4px 0;
+				padding: 7px 12px;
+			}
+		}
+	}
+}
+
+.navbar-toggler {
+	i {
+		color: #fff;
+	}
+}
