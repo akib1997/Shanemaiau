@@ -107,16 +107,17 @@ footer {
     opacity: 1;
     top: 3rem;
     z-index: 30;
-    background-color: rgb(70, 39, 39);
+    background-color: #eec41f;
   }
 }
 
 .menu {
-  @include tab-screen {
+  @include medium-screen {
     background-color: black;
     position: absolute;
-    z-index: 9999;
+    z-index: 99;
     left: -100%;
+    padding-bottom: 1rem;
   }
   li {
     &:hover > a {
@@ -131,11 +132,21 @@ footer {
   .dropdown {
     .dropdown-item {
       left: 60%;
-      opacity: 0;
-      top: 0;
+
+      &::after {
+        content: "";
+        border: 0 solid transparent;
+        border-top-width: 15px;
+        border-right-width: 15px;
+        border-bottom: 15px solid #eec41f;
+        position: absolute;
+        top: -5px;
+        left: -2px;
+        transform: rotate(45deg);
+      }
     }
     &:hover > .dropdown-item {
-      left: 50%;
+      left: 12rem;
       opacity: 1;
       top: 1rem;
     }
@@ -144,7 +155,7 @@ footer {
 
 .sidebar {
   transition: all 0.1s;
-  @include medium-screen {
+  @include large-screen {
     position: absolute;
     opacity: 0;
     left: -100%;
@@ -157,4 +168,23 @@ footer {
   opacity: 1;
   top: 4rem;
   z-index: 21;
+}
+
+.open-menu {
+  display: none;
+  @include medium-screen {
+    display: block;
+  }
+}
+
+.close-menu {
+  display: none;
+  // position: absolute;
+}
+.menu.menu.active {
+  .close-menu {
+    @include medium-screen {
+      display: flex;
+    }
+  }
 }

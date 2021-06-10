@@ -58,7 +58,7 @@ footer .f-logo {
   display: block;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   footer .f-logo {
     margin: 0 0 1rem 0;
   }
@@ -152,7 +152,7 @@ footer .form small {
   bottom: 0;
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 1200px) {
   .white-logo::after {
     right: -4rem;
   }
@@ -173,7 +173,7 @@ footer .form small {
   padding-top: 0.5rem;
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 1200px) {
   .white-logo .t-logo {
     max-width: 140px;
   }
@@ -195,7 +195,7 @@ footer .form small {
   z-index: 99;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   .header .logo {
     top: 0;
   }
@@ -224,7 +224,7 @@ footer .form small {
   width: 60px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   .header .logo {
     margin: 0 auto 0 0;
   }
@@ -259,7 +259,7 @@ footer .form small {
           box-shadow: none;
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 1200px) {
   .header nav ul li {
     padding: 0 0.5rem;
   }
@@ -392,15 +392,16 @@ footer a {
   opacity: 1;
   top: 3rem;
   z-index: 30;
-  background-color: #462727;
+  background-color: #eec41f;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .menu {
     background-color: black;
     position: absolute;
-    z-index: 9999;
+    z-index: 99;
     left: -100%;
+    padding-bottom: 1rem;
   }
 }
 
@@ -415,12 +416,23 @@ footer a {
 
 .menu.active .dropdown .dropdown-item {
   left: 60%;
-  opacity: 0;
-  top: 0;
+}
+
+.menu.active .dropdown .dropdown-item::after {
+  content: "";
+  border: 0 solid transparent;
+  border-top-width: 15px;
+  border-right-width: 15px;
+  border-bottom: 15px solid #eec41f;
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .menu.active .dropdown:hover > .dropdown-item {
-  left: 50%;
+  left: 12rem;
   opacity: 1;
   top: 1rem;
 }
@@ -444,5 +456,27 @@ footer a {
   opacity: 1;
   top: 4rem;
   z-index: 21;
+}
+
+.open-menu {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .open-menu {
+    display: block;
+  }
+}
+
+.close-menu {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .menu.menu.active .close-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=main.css.map */
