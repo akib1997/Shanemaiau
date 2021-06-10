@@ -25,16 +25,17 @@
     <!-- Slick CSS  -->
 
     <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+    <!-- Tailwind CSS  -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./scss/main.css" />
   </head>
   <body class="bg-white text-black">
@@ -42,7 +43,10 @@
     <div class="shadow py-4 px-3">
       <div class="sm:w-10/12 mx-auto">
         <div class="flex items-center justify-between">
-          <div class="hidden xl:flex">
+          <button class="lg:hidden block" id="openMenu">
+            <i class="fas text-xl fa-bars text-xl"></i>
+          </button>
+          <div class="hidden xl:flex items-center">
             <a href="tel:+689 40 15 45 25" class="mr-6 text-lg">
               <i class="fas text-2xl fa-headphones mr-2"></i>+689 40 15 45 25</a
             >
@@ -50,17 +54,19 @@
               >olympianssport@gmail.com</a
             >
           </div>
-          <div class="logo xl:mx-auto max-w-sm md:max-w-md">
+          <div
+            class="logo mx-auto lg:ml-0 lg:mr-auto xl:mx-auto w-1/2 md:max-w-xs"
+          >
             <a href="#" class="block">
               <img src="./images/top-logo.png" class="w-full" alt="Logo" />
             </a>
           </div>
           <div class="ml-auto flex">
-            <a href="#" class="mr-6 sm:flex hidden"
+            <a href="#" class="mr-6 sm:flex hidden items-center"
               ><i class="far text-2xl fa-user mr-2"></i>
               <span class="xl:block hidden">Connexion</span>
             </a>
-            <a href="#" class="relative flex"
+            <a href="#" class="relative flex items-center"
               ><i class="fas text-2xl fa-shopping-bag mr-2"></i>
               <span class="xl:block hidden">Panier</span>
               <span
@@ -87,32 +93,69 @@
     </div>
     <!-- Top Area  -->
 
-    <header class="px-3">
-      <div class="container mx-auto">
-        <div class="bg-black text-white text-center">
-          <ul class="inline-flex">
+    <header class="relative">
+      <div class="xl:container mx-auto">
+        <div class="bg-black text-white lg:text-center">
+          <!-- Menu  -->
+          <ul class="lg:inline-flex flex-wrap menu">
             <li>
-              <a href="#" class="uppercase text-white hover:text-red mx-8 py-4"
-                >Accueil</a
-              >
+              <a href="#" class="uppercase text-white mx-8 py-4">Accueil</a>
+            </li>
+            <li class="relative dropdown">
+              <a href="#" class="uppercase text-white mx-8 py-4"
+                >Nos Promos <i class="fas fa-angle-down text-red"></i
+              ></a>
+              <ul class="dropdown-item">
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >NOS NOUVEAUTÉS</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >NOUVEAUTÉS</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >CATÉGORIES</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1">ACCUEIL</a>
+                </li>
+              </ul>
+            </li>
+            <li class="relative dropdown">
+              <a href="#" class="uppercase text-white mx-8 py-4"
+                >Nos Nouveautés <i class="fas fa-angle-down text-red"></i
+              ></a>
+              <ul class="dropdown-item">
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >NOS NOUVEAUTÉS</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >NOUVEAUTÉS</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1"
+                    >CATÉGORIES</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a href="#" class="uppercase text-white px-3 py-1">ACCUEIL</a>
+                </li>
+              </ul>
             </li>
             <li>
-              <a href="#" class="uppercase text-white hover:text-red mx-8 py-4"
-                >Nos Promos
-              </a>
+              <a href="#" class="uppercase text-white mx-8 py-4">Nos Marques</a>
             </li>
             <li>
-              <a href="#" class="uppercase text-white hover:text-red mx-8 py-4"
-                >Nos Nouveautés</a
-              >
-            </li>
-            <li>
-              <a href="#" class="uppercase text-white hover:text-red mx-8 py-4"
-                >Nos Marques</a
-              >
-            </li>
-            <li>
-              <a href="#" class="uppercase text-white hover:text-red mx-6 py-4"
+              <a href="#" class="uppercase text-white mx-8 py-4"
                 >Nos services</a
               >
             </li>
@@ -123,39 +166,47 @@
                   uppercase
                   text-white
                   hover:text-black
-                  bg-yellow-500
                   py-4
                   px-3
+                  lg:mx-0
+                  mx-6
                 "
+                style="background-color: #eec41f"
                 >SUPFORM</a
               >
             </li>
           </ul>
+          <!-- Menu  -->
         </div>
         <!-- Catagory  -->
-        <div class="flex flex-wrap">
-          <div class="w-1/5">
-            <div class="bg-red-500 text-white py-3 flex pl-5 items-center">
-              <i class="fas text-xl fa-bars"></i>
-              <span class="uppercase pl-6">Catégories</span>
+        <div class="flex flex-wrap relative z-20">
+          <div class="w-full sm:w-1/2 lg:w-1/5">
+            <div class="bg-red text-white py-4 flex pl-5 items-center">
+              <i class="fas text-xl fa-bars sm:block hidden"></i>
+              <span class="uppercase ml-6 xl:block hidden">Catégories</span>
+              <button
+                class="
+                  outline-none
+                  focus:outline-none
+                  uppercase
+                  ml-6
+                  xl:hidden
+                  block
+                  w-full
+                "
+                id="openSidebar"
+              >
+                Catégories
+              </button>
             </div>
           </div>
-          <div class="w-4/5 p-1" style="background-color: #e6e4e4">
+          <div
+            class="w-full sm:w-1/2 lg:w-4/5 p-2"
+            style="background-color: #e6e4e4"
+          >
             <div class="bg-white flex items-center pl-6">
-              <span class="w-8"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    id="fi-rr-search"
-                    d="M17.749,16.689l-4.471-4.471a7.5,7.5,0,1,0-1.059,1.059l4.471,4.471a.749.749,0,1,0,1.059-1.059ZM7.482,13.474a5.992,5.992,0,1,1,5.992-5.992,5.992,5.992,0,0,1-5.992,5.992Z"
-                    transform="translate(0.032 0.032)"
-                    fill="red"
-                  />
-                </svg>
+              <span class="w-8 xl:block hidden"
+                ><i class="fas fa-search text-red"></i>
               </span>
               <input
                 type="text"
@@ -196,24 +247,51 @@
               <button
                 type="submit"
                 class="
-                  bg-red-500
+                  bg-red
                   text-white
                   border-none
                   outline-none
                   focus:outline-none
-                  px-6
+                  xl:px-6
+                  px-3
                   py-2
                   uppercase
                   rounded-none
                   ml-4
                 "
               >
-                Rechercher
+                <span class="w-8 xl:hidden block"
+                  ><i class="fas fa-search"></i>
+                </span>
+                <span class="xl:block hidden">Rechercher</span>
               </button>
             </div>
           </div>
-          <div class="w-1/5 shadow-2xl">
-            <ul class="pl-5 sidebar">
+          <div
+            class="xl:w-1/5 shadow-xl sidebar bg-white relative"
+            id="sidebar"
+          >
+            <button
+              class="
+                w-10
+                h-10
+                rounded-full
+                bg-red-600
+                flex
+                xl:hidden
+                items-center
+                justify-center
+                absolute
+                -top-4
+                -right-4
+                shadow-lg
+                text-white
+              "
+              id="closeSidebar"
+            >
+              <i class="fas fa-times text-xl"></i>
+            </button>
+            <ul class="pl-5">
               <li class="my-4">
                 <a href="#" class="flex items-center py-2">
                   <svg
@@ -803,8 +881,9 @@
               </li>
             </ul>
           </div>
-          <div class="w-4/5 bg-green-300">
+          <div class="xl:w-4/5 bg-gray">
             <div class="grid grid-cols-2">
+              <!-- Catagory Box -->
               <div
                 class="
                   text-center text-white
@@ -818,26 +897,31 @@
                   background-image: url(./images/legs-soccer-football-player.png);
                 "
               >
-                <h3 class="font-extrabold text-3xl mb-3 uppercase">
-                  SPORT COLLECTIF
-                </h3>
-                <p class="font-normal">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti
-                </p>
-                <a
-                  href="#"
-                  class="
-                    uppercase
-                    py-1
-                    px-8
-                    border border-white
-                    mt-4
-                    font-normal
-                  "
-                  >En savoir plus</a
-                >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">
+                    SPORT COLLECTIF
+                  </h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="
+                      uppercase
+                      py-1
+                      px-8
+                      border border-white
+                      mt-4
+                      font-normal
+                    "
+                    >En savoir plus</a
+                  >
+                </div>
               </div>
+              <!-- Catagory Box -->
+
+              <!-- Catagory Box -->
               <div
                 class="
                   text-center text-white
@@ -852,17 +936,147 @@
                   background-image: url(./images/young-woman-playing-tennis-court.png);
                 "
               >
-                <h3 class="font-extrabold text-3xl mb-3 uppercase">
-                  SPORT INDIVIDUEL
-                </h3>
-                <p class="font-normal">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti
-                </p>
-                <a href="#" class="uppercase py-1 px-8 border border-white mt-4"
-                  >En savoir plus</a
-                >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">
+                    SPORT INDIVIDUEL
+                  </h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="uppercase py-1 px-8 border border-white mt-4"
+                    >En savoir plus</a
+                  >
+                </div>
               </div>
+              <!-- Catagory Box -->
+
+              <!-- Catagory Box -->
+              <div
+                class="
+                  text-center text-white
+                  py-10
+                  lg:px-12
+                  bg-center bg-cover bg-shadow
+                  relative
+                  z-20
+                  font-normal
+                "
+                style="
+                  background-image: url(./images/athletes-floor-dumbbell-lift-with-one-hand.png);
+                "
+              >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">
+                    Musculation
+                  </h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="uppercase py-1 px-8 border border-white mt-4"
+                    >En savoir plus</a
+                  >
+                </div>
+              </div>
+              <!-- Catagory Box -->
+
+              <!-- Catagory Box -->
+              <div
+                class="
+                  text-center text-white
+                  py-10
+                  lg:px-12
+                  bg-center bg-cover bg-shadow
+                  relative
+                  z-20
+                  font-normal
+                "
+                style="
+                  background-image: url(./images/two-professional-boxer-boxing-black-smoky-background.png);
+                "
+              >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">
+                    SPORT de combat
+                  </h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="uppercase py-1 px-8 border border-white mt-4"
+                    >En savoir plus</a
+                  >
+                </div>
+              </div>
+              <!-- Catagory Box -->
+
+              <!-- Catagory Box -->
+              <div
+                class="
+                  text-center text-white
+                  py-10
+                  lg:px-12
+                  bg-center bg-cover bg-shadow
+                  relative
+                  z-20
+                  font-normal
+                "
+                style="
+                  background-image: url(./images/cyclist-pedaling-racing-bike-outdoors.png);
+                "
+              >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">CYcLE</h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="uppercase py-1 px-8 border border-white mt-4"
+                    >En savoir plus</a
+                  >
+                </div>
+              </div>
+              <!-- Catagory Box -->
+              <!-- Catagory Box -->
+              <div
+                class="
+                  text-center text-white
+                  py-10
+                  lg:px-12
+                  bg-center bg-cover bg-shadow
+                  relative
+                  z-20
+                  font-normal
+                "
+                style="
+                  background-image: url(./images/couple-jogging-running-outdoors-park-near-water-young-bearded-man-woman-exercising-together.png);
+                "
+              >
+                <div class="w-3/4 mx-auto">
+                  <h3 class="font-extrabold text-3xl mb-3 uppercase">
+                    Running
+                  </h3>
+                  <p class="font-normal">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium voluptatum deleniti
+                  </p>
+                  <a
+                    href="#"
+                    class="uppercase py-1 px-8 border border-white mt-4"
+                    >En savoir plus</a
+                  >
+                </div>
+              </div>
+              <!-- Catagory Box -->
             </div>
           </div>
         </div>
@@ -878,7 +1092,7 @@
         </h2>
 
         <!-- Slick Slider  -->
-        <div class="slick-slider md:mx-12 pb-8">
+        <div class="slick-slider mx-6 sm:mx-12 pb-8">
           <!-- Product Box  -->
           <div class="py-4">
             <div class="text-center text-black product-box pt-8">
@@ -1338,9 +1552,13 @@
             background-image: url('./images/man-training-muscles-with-dumbbells-studio-dark-background-with-smoke.jpg');
           "
         >
-          <div class="pl-20">
-            <img src="./images/calque-mage.png" class="s" alt="Nutrition" />
-            <h2 class="uppercase font-normal text-5xl text-white">
+          <div class="pl-4 lg:pl-20">
+            <img
+              src="./images/calque-mage.png"
+              class="max-w-sm w-full"
+              alt="Nutrition"
+            />
+            <h2 class="uppercase font-normal text-3xl sm:text-5xl text-white">
               <span class="font-black block">Nutrition</span> sportive
             </h2>
           </div>
@@ -1358,7 +1576,7 @@
         </h2>
 
         <!-- Slick Slider  -->
-        <div class="slick-slider md:mx-12 pb-8">
+        <div class="slick-slider mx-6 sm:mx-12 pb-8">
           <!-- Product Box  -->
           <div class="py-4">
             <div class="text-center text-black product-box pt-8">
@@ -1549,9 +1767,9 @@
             background-image: url('./images/woman-tying-her-shoelaces-before-exercise.jpg');
           "
         >
-          <div class="pl-20">
+          <div class="pl-4 lg:pl-20">
             <img src="./images/Image 2.png" class="s" alt="Chaussures Adidas" />
-            <h2 class="uppercase font-normal text-5xl text-white">
+            <h2 class="uppercase font-normal text-3xl sm:text-5xl text-white">
               <span class="font-black block">Chaussures</span> Adidas
             </h2>
           </div>
@@ -1562,7 +1780,7 @@
     <!-- LES DERNIÈRES NOUVEAUTÉS  -->
 
     <!-- Nos marques -->
-    <section class="py-20">
+    <section class="py-12 lg:py-20 px-3">
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold text-black mb-12 text-center">
           Nos marques
@@ -1594,32 +1812,34 @@
     </section>
     <!-- Nos marques -->
 
-    <section
-      class="py-40 relative z-10 bg-center bg-cover"
-      style="
-        background-image: url(https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-      "
-    >
-      <div class="container mx-auto">
-        <h2
-          class="
-            text-red
-            bg-black
-            px-4
-            py-1
-            uppercase
-            font-bold
-            text-3xl
-            mb-4
-            inline-block
-          "
-        >
-          interview
-        </h2>
-        <p class="text-white max-w-xs">
-          Lorem ipsum, dolor magni porro id quaerat aspernatur ipsum officiis
-          qui? A tenetur ad omnis.
-        </p>
+    <section class="relative z-10 px-3">
+      <div
+        class="container mx-auto bg-center bg-cover pt-20 lg:pt-40 pb-40"
+        style="
+          background-image: url(https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+        "
+      >
+        <div class="md:text-left text-center md:ml-20">
+          <h2
+            class="
+              text-red
+              bg-black
+              px-4
+              py-1
+              uppercase
+              font-bold
+              text-3xl
+              mb-4
+              inline-block
+            "
+          >
+            interview
+          </h2>
+          <p class="text-white md:max-w-xs">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti
+          </p>
+        </div>
         <button
           class="
             text-red-700
@@ -1627,10 +1847,12 @@
             left-0
             right-0
             top-0
-            bottom-0
+            lg:bottom-0
+            -bottom-32
             m-auto
             z-20
-            text-9xl
+            text-6xl
+            lg:text-9xl
           "
         >
           <i class="far fa-play-circle"></i>
@@ -1639,7 +1861,7 @@
     </section>
 
     <!-- Nos Services -->
-    <section class="py-16">
+    <section class="py-16 px-3">
       <div class="container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
           <img
@@ -1667,9 +1889,9 @@
     <!-- Nos Services -->
 
     <!-- Newsletters -->
-    <section class="py-16" style="background-color: #e9e9e9">
+    <section class="py-8 lg:py-16 px-3" style="background-color: #e9e9e9">
       <div class="container">
-        <div class="flex justify-evenly items-center">
+        <div class="flex justify-evenly items-center flex-wrap">
           <div class="p-4">
             <h3 class="text-3xl uppercase">Newsletters</h3>
             <p>
@@ -1677,7 +1899,7 @@
               meilleurs avantages
             </p>
           </div>
-          <form class="max-w-md">
+          <form class="max-w-md my-8">
             <div class="flex">
               <input
                 type="email"
@@ -1742,11 +1964,23 @@
     </section>
     <!-- Newsletters  -->
     <!-- Footer  -->
-    <footer class="pt-20 text-black">
-      <div class="container mx-auto">
-        <div class="grid grid-cols-5 xl:gap-12">
+    <footer class="pt-10 lg:pt-20 text-black">
+      <div class="container mx-auto px-3">
+        <div
+          class="
+            grid
+            col-auto
+            sm:grid-cols-2
+            lg:grid-cols-4
+            xl:grid-cols-5
+            gap-4
+            md:gap-6
+            xl:gap-12
+            justify-between
+          "
+        >
           <div class="col-span-1">
-            <a href="#" class="block mb-8">
+            <a href="#" class="block mb-8 max-w-md">
               <img src="./images/calque-mage.png" class="w-full" alt="logo" />
             </a>
             <p>
@@ -1793,7 +2027,7 @@
           </div>
           <div class="col-span-2">
             <h6 class="text-xl uppercase mb-10">Catégories</h6>
-            <div class="flex flex-wrap">
+            <div class="grid grid-cols-2 gap-6">
               <ul>
                 <li>
                   <a href="#" class="inline-block mb-3"
@@ -1831,7 +2065,7 @@
                   >
                 </li>
               </ul>
-              <ul class="mx-auto">
+              <ul class="">
                 <li>
                   <a href="#" class="inline-block mb-3"
                     ><i class="fas text-xl fa-chevron-right text-red mr-2"></i
@@ -1903,13 +2137,17 @@
         </div>
         <div class="mt-12">
           <div class="flex justify-end">
-            <img src="./images/p-mathods.png" class="max-w-md" alt="Payments" />
+            <img
+              src="./images/p-mathods.png"
+              class="max-w-md w-full"
+              alt="Payments"
+            />
           </div>
         </div>
       </div>
-      <div class="bg-gray py-6 mt-8">
+      <div class="bg-gray py-6 mt-8 px-3">
         <div class="container mx-auto">
-          <div class="flex justify-between">
+          <div class="flex justify-between flex-wrap">
             <p style="color: #434343">Copyright 2021 Devlab.</p>
             <a href="tel:+689 40 15 45 25" class="text-lg">
               <i class="fas text-2xl fa-headphones mr-2"></i>+689 40 15 45 25</a
@@ -1958,6 +2196,15 @@
               },
             },
           ],
+        });
+        $("#openSidebar").click(function () {
+          $("#sidebar").addClass("active");
+        });
+        $("#closeSidebar").click(function () {
+          $("#sidebar").removeClass("active");
+        });
+        $("#openMenu").click(function () {
+          $(".menu").toggleClass("active");
         });
       });
     </script>

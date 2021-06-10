@@ -87,3 +87,74 @@ footer {
 .slick-prev i {
   font-size: 16px;
 }
+
+.dropdown {
+  .dropdown-item {
+    position: absolute;
+    opacity: 0;
+    text-align: left;
+    background-color: black;
+    left: 1rem;
+    top: 5rem;
+  }
+
+  &:hover .dropdown a {
+    &:hover {
+      color: red;
+    }
+  }
+  &:hover .dropdown-item {
+    opacity: 1;
+    top: 3rem;
+    z-index: 30;
+    background-color: rgb(70, 39, 39);
+  }
+}
+
+.menu {
+  @include tab-screen {
+    background-color: black;
+    position: absolute;
+    z-index: 9999;
+    left: -100%;
+  }
+  li {
+    &:hover > a {
+      color: red;
+    }
+  }
+}
+.menu.active {
+  left: 0;
+  width: 100%;
+
+  .dropdown {
+    .dropdown-item {
+      left: 60%;
+      opacity: 0;
+      top: 0;
+    }
+    &:hover > .dropdown-item {
+      left: 50%;
+      opacity: 1;
+      top: 1rem;
+    }
+  }
+}
+
+.sidebar {
+  transition: all 0.1s;
+  @include medium-screen {
+    position: absolute;
+    opacity: 0;
+    left: -100%;
+    top: 5rem;
+  }
+}
+
+.sidebar.active {
+  left: 0;
+  opacity: 1;
+  top: 4rem;
+  z-index: 21;
+}
